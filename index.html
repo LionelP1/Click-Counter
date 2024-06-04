@@ -18,15 +18,33 @@
                 <i class="fa-brands fa-github fa-xl" style="color: #000000;"></i>
             </a>
         </div>
-        <h1 class="title">Word Counter</h1>
+        <h1 class="title">Click Counter</h1>
     </header>
 
     <div class="timer">0.0</div>
     <div class="cps">0</div>
     <div class="clicks">0</div>
     <div class="clickArea"></div>
-    <button class="btnTen">10 Seconds</button>
-    <button class="btnFive">5 Seconds</button>
+
+    <div class="buttonDiv">
+        <button id="oneBtn" class="secBtn">1 Seconds</button>
+        <button id="twoBtn" class="secBtn">5 Seconds</button>
+        <button id="tenBtn" class="secBtn">10 Seconds</button>
+        <button id="thirthyBtn" class="secBtn">30 Seconds</button>
+        <button id="sixtyBtn" class="secBtn">60 Seconds</button>
+        <button id="hundredBtn" class="secBtn">100 Seconds</button>
+    </div>
+
+
+    <!-- POPUP-->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <p id="clicksText">Clicks</p>
+            <p id="cpsText">CPS</p>
+            <button id="closeButton">Close</button>
+        </div>
+    </div>
 
 
     <script src = "script.js"></script>
