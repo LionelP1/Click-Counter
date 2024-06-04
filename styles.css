@@ -44,3 +44,13 @@ header a {
 .home-link{
     margin-right: 15px;
 }
+
+
+/*Non Header*/
+
+.clickArea{
+    border-radius: 10px;
+    border: #000000 solid;
+    width:200px;
+    height:200px;
+}
