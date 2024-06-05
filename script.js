@@ -2,12 +2,8 @@ const clickArea = document.querySelector(".clickArea");
 const timerDiv = document.querySelector(".timer");
 const cpsDiv = document.querySelector(".cps");
 const clicksDiv = document.querySelector(".clicks");
+const buttons = document.querySelectorAll(".secBtn");
 
-/*const fiveBtn = document.querySelector("#fiveBtn");
-const tenBtn = document.querySelector("#tenBtn");
-fiveBtn.addEventListener("click", () => gameTime = 5);
-tenBtn.addEventListener("click", () => gameTime = 10);
-*/
 
 
 
@@ -20,6 +16,14 @@ let gameTime = 3;
 
 
 clickArea.addEventListener("click", () => startGame(gameTime));
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        gameTime = parseInt(button.textContent.replace(" Seconds", ""));
+        setButtonColor(button);
+    });
+});
+
 
 
 function startGame(seconds){
@@ -70,6 +74,14 @@ function resetGame(timer){
     clicksDiv.textContent = 0;
 }
 
+
+function setButtonColor(clickedButton){
+    buttons.forEach(button => {
+        button.style.backgroundColor = "";
+    });
+    clickedButton.style.backgroundColor = "#3498DB";
+
+}
 
 /*Popup*/
 document.getElementById("closeButton").addEventListener("click", hidePopup);

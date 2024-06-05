@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +9,14 @@
 html, body {
     background-color: #f9f9f9cb;
     height: 100%;
+
 }
 
 header{
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100vw;
 }
@@ -46,21 +49,6 @@ header a {
 }
 
 
-/*Non Header*/
-
-.clickArea{
-    border-radius: 10px;
-    border: #000000 solid;
-    width:200px;
-    height:200px;
-}
-
-
-
-
-
-/*Popup CSS*/
-
 .popup {
     display: none;
     position: fixed;
@@ -83,6 +71,8 @@ header a {
 
 }
 
+
+
 .close {
     color: #aaa;
     float: right;
@@ -94,4 +84,72 @@ header a {
     right: 10px;
 }
 
-  
+
+
+
+
+
+
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    height: 80%; 
+    margin-top:3%;
+
+}
+
+
+.main { 
+    flex: 4;
+    width: 45%;
+    padding:3%;
+    margin: 0 4%;
+    height: 100%;
+    text-align: center;
+    border: #000000 solid 1px;
+    border-radius: 20px;
+
+}
+
+.stats {
+    display:flex;
+    justify-content: space-around;
+    height:13%;
+}
+
+.info {
+    width: 25%;
+    border:#000000 solid;
+    border-radius: 25px;
+    height:100%;
+
+}
+
+.clickArea{
+    border-radius: 25px;
+    border: #000000 solid;
+    width:95%;
+    height:75%;
+    margin: 2rem auto;
+    margin-bottom:0;
+}
+
+
+.buttonDiv {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    border:black solid 1px;
+    width:45%;
+    margin-right:4%;
+    border-radius: 20px;
+    padding:2%;
+}
+.secBtn {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
