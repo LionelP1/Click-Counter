@@ -12,10 +12,11 @@ let counter = 0;
 let cps = 0;
 let clicks = 0;
 let startTime = 0;
-let gameTime = 3;
+let gameTime = 5;
 
 
 clickArea.addEventListener("click", () => startGame(gameTime));
+
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -27,6 +28,7 @@ buttons.forEach(button => {
 
 
 function startGame(seconds){
+    clickArea.textContent = '';
     if(!gameOn){
         gameOn = true;
         startTime = Date.now();
@@ -69,19 +71,20 @@ function resetGame(timer){
     cps = 0;
     clicks = 0;
     startTime = 0;
-    timerDiv.textContent = 0.0;
+    timerDiv.textContent = "0.0";
     cpsDiv.textContent = 0;
     clicksDiv.textContent = 0;
+    clickArea.textContent = 'Click Here';
 }
 
 
 function setButtonColor(clickedButton){
     buttons.forEach(button => {
-        button.style.backgroundColor = "";
+        button.style.backgroundColor = "#343536";
     });
     clickedButton.style.backgroundColor = "#3498DB";
-
 }
+
 
 /*Popup*/
 document.getElementById("closeButton").addEventListener("click", hidePopup);
@@ -96,6 +99,3 @@ function showPopup() {
 function hidePopup() {
     document.getElementById("popup").style.display = "none";
 }
-
-
-

@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/4be83870fe.js" crossorigin="anonymous"></script>
 
-    <title>Word Counter</title>
+    <title>Click Counter</title>
 </head>
 <body>
     <header>
         <div class="left-icons">
             <a href="index.html" class="home-link">
-                <i class="fa-solid fa-house fa-xl" style="color: #000000;"></i>
+                <i class="fa-solid fa-house fa-xl" style="color: #ffffff;"></i>
             </a>
             <a href= "https://github.com/lpei1900/Click-Counter" class="github-link">
-                <i class="fa-brands fa-github fa-xl" style="color: #000000;"></i>
+                <i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i>
             </a>
         </div>
         <h1 class="title">Click Counter</h1>
@@ -24,37 +24,35 @@
     <div class="content">
         <div class="main">
             <div class="stats">
-                <div class="info">
+                <div class="info" id="timerDiv">
                     <div class="timer">0.0</div>
-                    <div class="timer-label">Timer</div>
+                    <div class="label">Timer</div>
                 </div>
         
-                <div class="info">
+                <div class="info" id="cpsDiv">
                     <div class="cps">0</div>
-                    <div class="cps-label">CPS</div>
+                    <div class="label">CPS</div>
                 </div>
-                <div class="info">
+                <div class="info" id="clicksDiv">
                     <div class="clicks">0</div>
-                    <div class="clicks-label">Clicks</div>
+                    <div class="label">Clicks</div>
                 </div>
             </div>
-            <div class="clickArea"></div>
+            <div class="clickArea">Click Here</div>
         </div>
 
         <div class="buttonDiv">
-            <div class="select">Clicking Times</div>
-            <button id="oneBtn" class="secBtn">1 Seconds</button>
-            <button id="twoBtn" class="secBtn">3 Seconds</button>
-            <button id="twoBtn" class="secBtn">5 Seconds</button>
-            <button id="tenBtn" class="secBtn">10 Seconds</button>
-            <button id="thirthyBtn" class="secBtn">20 Seconds</button>
-            <button id="thirthyBtn" class="secBtn">30 Seconds</button>
-            <button id="sixtyBtn" class="secBtn">60 Seconds</button>
-            <button id="hundredBtn" class="secBtn">100 Seconds</button>
+            <div class="select">CLICKING TIMES</div>
+            <button class="secBtn">1 SECONDS</button>
+            <button class="secBtn">3 SECONDS</button>
+            <button id="fiveBtn" class="secBtn">5 SECONDS</button>
+            <button class="secBtn">10 SECONDS</button>
+            <button class="secBtn">20 SECONDS</button>
+            <button class="secBtn">30 SECONDS</button>
+            <button class="secBtn">60 SECONDS</button>
+            <button class="secBtn">100 SECONDS</button>
         </div>
     </div>
-    
-
 
 
     <!-- POPUP-->
@@ -66,7 +64,6 @@
             <button id="closeButton">Close</button>
         </div>
     </div>
-
 
     <script src = "script.js"></script>
 </body>

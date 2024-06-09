@@ -5,17 +5,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html, body {
-    background-color: #f9f9f9cb;
+body {
+    background-color: #31363a;;
     height: 100vh;
+    font-family: Roboto, sans-serif;
 
 }
 
 header{
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #242526;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100vw;
@@ -40,14 +40,16 @@ header a {
     margin: 0 2vw;
     font-size: 24px;
     color: #000000;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
 }
 
 .home-link{
     margin-right: 15px;
 }
 
+
+.title{
+    color:white;
+}
 
 .popup {
     display: none;
@@ -109,6 +111,7 @@ header a {
     text-align: center;
     border: #000000 solid 1px;
     border-radius: 20px;
+    background-color: #242526;
 
 }
 
@@ -120,22 +123,41 @@ header a {
 
 .info {
     width: 25%;
-    border:#000000 solid;
+    border:#000000 solid 1px;
     border-radius: 25px;
     height:100%;
+    background-color: #5304ff;
+    color: #ffffff;
 
+}
+
+#timerDiv{
+    background-color: #5304ff;
+}
+
+#cpsDiv{
+    background-color: #ff8604;
+}
+
+#clicksDiv{
+    background-color: #d20a0a;
 }
 
 .clickArea{
     border-radius: 25px;
-    border: #000000 solid;
+    border: #000000 solid 1px;
     width:95%;
     height:75%;
     margin: 2rem auto;
     margin-bottom:0;
     max-height: 500px;
+    color: #ffffff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 }
-
 
 .buttonDiv {
     flex: 2;
@@ -148,20 +170,35 @@ header a {
     margin-right:4%;
     border-radius: 20px;
     padding:2%;
+    background-color: #242526;
+    color:white;
+    font-weight: bold;
 }
 
 
 
+.secBtn {
+    background-color: #343536;
+    padding: 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    border:none;
+    font-weight: bold;
+}
+
+#fiveBtn{
+    background-color: #3498DB;
+}
 
 
-.select, .secBtn {
-    padding: 10px 20px;
-    border: 1px solid #000;
+.select{
     text-align: center;
 }
 
-.secBtn {
-    cursor: pointer;
+.timer, .cps, .clicks{
+    font-size: 1.5rem;
 }
 
 
@@ -183,3 +220,11 @@ header a {
         margin-bottom:0.5rem;
     }
 }
+
+
+.label{
+    font-size: 0.9rem;
+    margin-top:6px;
+}
+
+
