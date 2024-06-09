@@ -157,6 +157,11 @@ header a {
     justify-content: center;
     align-items: center;
     user-select: none;
+    font-size: 1.1rem;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .buttonDiv {
@@ -221,10 +226,28 @@ header a {
     }
 }
 
-
 .label{
     font-size: 0.9rem;
     margin-top:6px;
 }
 
 
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    /*background-color: rgba(255, 0, 225, 0.7);*/
+    background-color: #ff1ead;
+}
+  
+@keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
+
+
+
+  

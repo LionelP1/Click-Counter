@@ -4,9 +4,6 @@ const cpsDiv = document.querySelector(".cps");
 const clicksDiv = document.querySelector(".clicks");
 const buttons = document.querySelectorAll(".secBtn");
 
-
-
-
 let gameOn = false;
 let counter = 0;
 let cps = 0;
@@ -15,16 +12,12 @@ let startTime = 0;
 let gameTime = 5;
 
 
-clickArea.addEventListener("click", () => startGame(gameTime));
-
-
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         gameTime = parseInt(button.textContent.replace(" Seconds", ""));
         setButtonColor(button);
     });
 });
-
 
 
 function startGame(seconds){
@@ -99,3 +92,37 @@ function showPopup() {
 function hidePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+
+
+
+
+function createRipple(event) {
+    const button = event.currentTarget;
+  
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+  
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
+  
+    const ripple = button.getElementsByClassName("ripple")[0];
+  
+    if (ripple) {
+      ripple.remove();
+    }
+  
+    button.appendChild(circle);
+  }
+  
+  
+clickArea.addEventListener("click", (e) => {
+    startGame(gameTime);
+    createRipple(e);
+});
+  
+  
+  
