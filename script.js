@@ -27,7 +27,7 @@ function startGame(seconds){
         startTime = Date.now();
         updateClicks();
         let timer = setInterval(updateClock, 10);
-        setTimeout(() => resetGame(timer), seconds * 1000);
+        setTimeout(() => resetGame(timer, seconds), seconds * 1000);
     }
     else{
         updateClicks();
@@ -56,9 +56,9 @@ function updateClicks(){
     clicksDiv.textContent = clicks;
 }
 
-function resetGame(timer){
+function resetGame(timer, seconds){
     clearInterval(timer);
-    showPopup();
+    showPopup(seconds);
     gameOn = false;
     counter = 0;
     cps = 0;
@@ -83,13 +83,16 @@ function setButtonColor(clickedButton){
 document.getElementById("closeButton").addEventListener("click", hidePopup);
 document.getElementById("closePopup").addEventListener("click", hidePopup);
 
-function showPopup() {
+function showPopup(seconds) { 
+    document.body.style.overflow = "hidden";
     document.getElementById("popup").style.display = "block";
+    document.getElementById("timeText").textContent = `Time: ${seconds} Second/s`;
     document.getElementById("clicksText").textContent = `Clicks: ${clicks}`;
-    document.getElementById("cpsText").textContent = `Cps: ${cps}`;
+    document.getElementById("cpsText").textContent = `Cps: ${cps}/sec`;
 }
 
 function hidePopup() {
+    document.body.style.overflow = "auto";
     document.getElementById("popup").style.display = "none";
 }
 
